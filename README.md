@@ -13,7 +13,7 @@
 
 ## REPLICATEDSTORAGE LAYOUT
 
-The client code implies this exact folder/object structure must exist in `ReplicatedStorage` before the server scripts run. Create these first — no scripts, just instances.
+The client code implies this exact folder/object structure must exist in `ReplicatedStorage` before the server scripts run.
 
 ```
 ReplicatedStorage/
@@ -30,7 +30,7 @@ ReplicatedStorage/
 │   ├── LinearMulti               (Vector3Value, default 0,0,0)
 │   ├── AngularMulti              (Vector3Value, default 0,0,0)
 │   ├── Roughness                 (NumberValue, default 0)
-│   └── Value                    (BoolValue — whether shake is active, used by CamShake:Activate)
+│   └── Value                    (BoolValue  whether shake is active, used by CamShake:Activate)
 ├── UNPLANNEDOVERLOAD/            (Folder)
 │   ├── Shakelol                  (RemoteEvent)
 │   ├── CAMANTIHECC               (RemoteEvent)
@@ -43,11 +43,11 @@ ReplicatedStorage/
 │   ├── ChatWarn                  (RemoteEvent)
 │   └── FXHandler                 (RemoteEvent)
 ├── Settings/                     (Folder)
-│   └── Shake                    (StringValue — "on" | "reduced" | "off")
-└── PioTweenHookEvent             (RemoteEvent — PioTween library)
+│   └── Shake                    (StringValue  "on" | "reduced" | "off")
+└── PioTweenHookEvent             (RemoteEvent  PioTween library)
 ```
 
-> **Note on `CameraShake`:** The client code (`CamShake.lua`) treats `ReplicatedStorage.CameraShake` as a **Folder** with child `NumberValue`/`Vector3Value` objects. It reads `.Value` on each child every `RenderStepped`. The server drives shake by tweening these values (e.g. tweening `LinearIntensity.Value` to `0.06`). This is **not** a RemoteEvent itself — it is a replicated state container.
+> **Note on `CameraShake`:** The client code (`CamShake.lua`) treats `ReplicatedStorage.CameraShake` as a **Folder** with child `NumberValue`/`Vector3Value` objects. It reads `.Value` on each child every `RenderStepped`. The server drives shake by tweening these values (e.g. tweening `LinearIntensity.Value` to `0.06`). This is **not** a RemoteEvent itself  it is a replicated state container.
 
 ---
 

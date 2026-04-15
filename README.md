@@ -1,7 +1,5 @@
 # SERVER RECONSTRUCTION GUIDE
-> Full server-side analysis derived from `CORE_GAME_CLIENT.rbxmx`  
 > Every remote, every expected data shape, every stub, and a build order.  
-> This document is self-contained. You should never need to ask again.
 
 ---
 

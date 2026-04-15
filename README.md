@@ -1,6 +1,4 @@
 # SERVER RECONSTRUCTION GUIDE
----
-
 ## TABLE OF CONTENTS
 1. [ReplicatedStorage Layout](#replicatedstorage-layout)
 2. [Remote Catalogue](#remote-catalogue)

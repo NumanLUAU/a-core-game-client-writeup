@@ -467,13 +467,15 @@ Client references these directly by name:
 - `game.SoundService.Main.FlangeSoundEffect` (FlangeSoundEffect inside a Sound named "Main")
 
 ### Step 4 — Write `DialogModule` (ModuleScript in ReplicatedStorage)
-The client does `require(game.ReplicatedStorage:WaitForChild("DialogUnit"))` at the top of the dialog script. This module needs to exist. Its exact API is not used in the client code shown — it's required for its side effects. Create it as a minimal module:
+The client does `require(game.ReplicatedStorage:WaitForChild("DialogUnit"))` at the top of the dialog script. This module needs to exist. Iit's required for its side effects. Create it as a minimal module:
 ```lua
 -- ReplicatedStorage/DialogUnit (ModuleScript)
 -- Handles server-side dialog tree logic if needed.
 -- Client requires this for side effects (e.g. setting up shared dialog data).
 return {}
 ```
+
+IF IT EXISTS JUST IGNORE THIS STEP
 
 ### Step 5 — Write `RobertDialogServer` (Script in ServerScriptService)
 This is the most important original server script. It:

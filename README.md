@@ -1,6 +1,4 @@
 # SERVER RECONSTRUCTION GUIDE
-> Every remote, every expected data shape, every stub, and a build order.  
-
 ---
 
 ## TABLE OF CONTENTS

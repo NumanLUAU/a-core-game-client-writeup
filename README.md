@@ -234,7 +234,7 @@ Log or act upon elevated warn levels. Possible responses:
 **Purpose:** Server-triggered cinematic/visual effect system. Server sends an effect name and optional payload. Client runs the corresponding local visual. The architecture supports adding more named effects to the `FX` table.
 
 **How to add more effects:**  
-Add a new key to the `FX` table in `LocalMasterScript`'s `FXHandler` module. The server fires `FXHandler:FireAllClients("yourEffectName", optionalData)`.
+Add a new key to the `FX` table in `LocalMasterScript`'s `FXHandler` module. The server fires `FXHandler:FireAllClients("EffectName", optionalData)`.
 
 ---
 
@@ -515,7 +515,7 @@ The ambient system is entirely client-side (touches on `SPart` parts with an `Am
 
 ## SERVER SCRIPT STUBS
 
-Full stub code for every server script. Replace `-- TODO` comments with your game logic.
+Full stub code for every server script. Replace `-- TODO` comments with actual logic lol.
 
 ---
 
@@ -741,7 +741,7 @@ local function triggerOverload()
     IsOverloadActive = false
 end
 
--- TODO: Connect triggerOverload() to your game's actual trigger condition.
+-- TODO: Connect triggerOverload() to the game's actual trigger condition.
 -- Examples:
 -- workspace.SomeButton.ClickDetector.MouseClick:Connect(triggerOverload)
 -- game.ReplicatedStorage.Events.SomeServerEvent.OnServerEvent:Connect(triggerOverload)
@@ -795,7 +795,7 @@ local function deactivateAlarms()
     Status.Value = false
 end
 
--- TODO: Connect activateAlarms/deactivateAlarms to your game logic.
+-- TODO: Connect activateAlarms/deactivateAlarms to the game logic.
 -- Example: tie to reactor overload state, game phase, etc.
 
 -- Initial state
